@@ -1,0 +1,14 @@
+#!/bin/bash
+
+source env.sh
+	
+docker run \
+	--name=$CON_SPARK_MASTER_NAME \
+	-p $CON_SPARK_MASTER_PORT_SP_WEB \
+	-p $CON_SPARK_MASTER_PORT_SV_WEB \
+	-v $CON_SPARK_MASTER_VOL_SP_LOGS \
+	-v $CON_SPARK_MASTER_VOL_SV_LOGS \
+	-e DNSDOCK_ALIAS=$CON_SPARK_MASTER_DNS_NAME \
+	-h $CON_SPARK_MASTER_DNS_NAME \
+	--dns $HOST_IP \
+	-d $IMG_SPARK --bootstrap master

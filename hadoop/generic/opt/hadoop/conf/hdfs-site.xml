@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+   <property>
+      <name>dfs.replication</name>
+      <value>2</value>
+      <final>false</final>
+   </property>
+   <property>
+      <name>dfs.http.address</name>
+      <value>namenode.hadoop:50070</value>
+   </property>
+   <property>
+      <name>dfs.secondary.http.address</name>
+      <value>secondarynamenode.hadoop:50070</value>
+   </property>
+   <property>
+      <name>dfs.datanode.http.address</name>
+      <value>0.0.0.0:50070</value>
+   </property>
+</configuration>
