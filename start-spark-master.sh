@@ -4,6 +4,7 @@ source env.sh
 	
 docker run \
 	--name=$CON_SPARK_MASTER_NAME \
+	-p $CON_SPARK_MASTER_PORT_SP_MST \
 	-p $CON_SPARK_MASTER_PORT_SP_WEB \
 	-p $CON_SPARK_MASTER_PORT_SV_WEB \
 	-v $CON_SPARK_MASTER_VOL_SP_LOGS \

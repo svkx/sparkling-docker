@@ -34,7 +34,7 @@ export SPARK_MASTER_IP=master.spark
 # - SPARK_MASTER_PORT / SPARK_MASTER_WEBUI_PORT, to use non-default ports for the master
 # - SPARK_MASTER_OPTS, to set config properties only for the master (e.g. "-Dx=y")
 export SPARK_WORKER_CORES=2
-export SPARK_WORKER_MEMORY=256m
+export SPARK_WORKER_MEMORY=512m
 # - SPARK_WORKER_PORT / SPARK_WORKER_WEBUI_PORT, to use non-default ports for the worker
 export SPARK_WORKER_INSTANCES=2
 # - SPARK_WORKER_DIR, to set the working directory of worker processes

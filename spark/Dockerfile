@@ -4,16 +4,16 @@ MAINTAINER Sergey Korytnikov "sergey.korytnikov@gmail.com"
 COPY generic/etc/supervisord-*.conf /etc/
 
 #RUN curl -s http://apache.mirrors.lucidnetworks.net/spark/spark-1.4.0/spark-1.4.0-bin-without-hadoop.tgz | tar -xz -C /opt/
-#RUN curl -s http://mirror.metrocast.net/apache/spark/spark-1.4.0/spark-1.4.0-bin-hadoop1.tgz | tar -xz -C /opt/
+RUN curl -s http://mirror.metrocast.net/apache/spark/spark-1.4.0/spark-1.4.0-bin-hadoop1.tgz | tar -xz -C /opt/
 
 #COPY spark-1.4.0-bin-without-hadoop.tgz /tmp/spark-1.4.0-bin-without-hadoop.tgz
 #RUN tar -xzf /tmp/spark-1.4.0-bin-without-hadoop.tgz -C /opt/
 #RUN rm -f /tmp/spark-1.4.0-bin-without-hadoop.tgz
 #RUN ln -s /opt/spark-1.4.0-bin-without-hadoop /opt/spark
 
-COPY spark-1.4.0-bin-hadoop1.tgz /tmp/spark-1.4.0-bin-hadoop1.tgz
-RUN tar -xzf /tmp/spark-1.4.0-bin-hadoop1.tgz -C /opt/
-RUN rm -f /tmp/spark-1.4.0-bin-hadoop1.tgz
+#COPY spark-1.4.0-bin-hadoop1.tgz /tmp/spark-1.4.0-bin-hadoop1.tgz
+#RUN tar -xzf /tmp/spark-1.4.0-bin-hadoop1.tgz -C /opt/
+#RUN rm -f /tmp/spark-1.4.0-bin-hadoop1.tgz
 RUN ln -s /opt/spark-1.4.0-bin-hadoop1 /opt/spark
 
 # Don't need this with hadoop version
