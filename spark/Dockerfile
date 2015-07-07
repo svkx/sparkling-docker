@@ -32,5 +32,7 @@ RUN chmod -v +x /etc/services.sh
 RUN chmod -v +x /opt/spark/sbin/spark-daemon.sh
 RUN chmod -v +x /opt/spark/sbin/start-worker.sh
 
+RUN mkdir -p /opt/spark/logs
+
 EXPOSE 7077
 

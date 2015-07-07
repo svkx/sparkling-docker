@@ -15,6 +15,9 @@ COPY generic/opt/hadoop/conf /opt/hadoop/conf
 COPY generic/etc/services.sh /etc/services.sh
 RUN chmod -v +x /etc/services.sh
 
+RUN mkdir -p /opt/hadoop/hdfs
+RUN mkdir -p /opt/hadoop/logs
+
 EXPOSE 8020 8021 50010 50020 50030
 
 

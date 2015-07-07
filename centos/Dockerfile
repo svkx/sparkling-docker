@@ -36,6 +36,10 @@ COPY generic/etc/supervisord.conf /etc/supervisord.conf
 # Setup /etc/bootstrap.sh
 COPY generic/etc/bootstrap.sh /etc/bootstrap.sh
 
+RUN mkdir -p /var/run/
+RUN mkdir -p /var/log/
+RUN mkdir -p /var/log/supervisord
+
 EXPOSE 22
 ENTRYPOINT ["/etc/bootstrap.sh"]
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]

@@ -26,4 +26,8 @@ COPY generic/opt/flume/conf/log4j.properties /opt/flume/conf/log4j.properties
 COPY generic/etc/services.sh /etc/services.sh
 RUN chmod -v +x /etc/services.sh
 
+RUN mkdir -p /var/log/flume
+RUN mkdir -p /var/log/httpd
+RUN mkdir -p /var/run/httpd
+
 EXPOSE 4545
